@@ -9,16 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let AppComponent = class AppComponent {
+let RegisterComponent = class RegisterComponent {
 };
-AppComponent = __decorate([
+RegisterComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        //template: '<h1>TaskBoard</h1>',
-        //templateUrl: "app/templates/navbar.template.html",
-        templateUrl: "app/templates/main.template.html",
+        selector: 'div-register',
+        templateUrl: "app/templates/register.template.html",
     }), 
     __metadata('design:paramtypes', [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], RegisterComponent);
+exports.RegisterComponent = RegisterComponent;
+//# sourceMappingURL=register.component.js.map

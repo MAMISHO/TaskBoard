@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+  <title><%=typeof title == 'undefined' ? 'TaskBoard' : title%></title>
+  <base href="/">
 
   <!-- Viewport mobile tag for sensible mobile support -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -31,10 +32,13 @@
           <!--STYLES-->
           <link rel="stylesheet" href="/styles/importer.css">
           <!--STYLES END-->
+          <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
           <script src="node_modules/core-js/client/shim.min.js"></script>
           <script src="node_modules/zone.js/dist/zone.js"></script>
           <script src="node_modules/reflect-metadata/Reflect.js"></script>
           <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+
 
           <script>
           /**
@@ -90,6 +94,7 @@
 </head>
 
 <body>
+
   <my-app>Loading...</my-app>
 
 
