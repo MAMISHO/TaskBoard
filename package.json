@@ -2,7 +2,7 @@
   "name": "TaskBoard",
   "private": true,
   "version": "0.0.1",
-  "description": "a Sails application",
+  "description": "SCRUM TaskBoard with angular 2 and SailsJS",
   "keywords": [],
   "dependencies": {
     "@angular/common": "2.2.1",
@@ -20,6 +20,7 @@
     "ejs": "2.3.4",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
+    "express": "^4.16.1",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-coffee": "1.0.0",
