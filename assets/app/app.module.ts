@@ -1,6 +1,6 @@
 import { NgModule }				from '@angular/core';
 import { BrowserModule  }		from '@angular/platform-browser';
-import { FormsModule }          from '@angular/forms';
+// import { FormsModule }          from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 // We need to import the ReactiveFormsModule and import it
@@ -33,7 +33,7 @@ const appRoutes: Routes = [
     ],
     imports:[
     		BrowserModule,
-    		FormsModule,
+    		// FormsModule,
     		RouterModule.forRoot(appRoutes)
     ],
     bootstrap:    [ AppComponent ],

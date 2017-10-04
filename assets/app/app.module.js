@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
-const forms_1 = require('@angular/forms');
+// import { FormsModule }          from '@angular/forms';
 const router_1 = require('@angular/router');
 const app_component_1 = require('./app.component');
 const register_component_1 = require('./components/register.component');
@@ -36,7 +36,7 @@ AppModule = __decorate([
         ],
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
+            // FormsModule,
             router_1.RouterModule.forRoot(appRoutes)
         ],
         bootstrap: [app_component_1.AppComponent],
