@@ -1,0 +1,73 @@
+<div class="container user-register">
+  <div [hidden]="submitted">
+    <h1>Register</h1>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="userName">Name</label>
+        <input type="text" class="form-control" id="userName"
+        required
+        [(ngModel)]="model.userName" name="name"
+        #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+        class="alert alert-danger">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="text" class="form-control" id="email"
+      required
+      [(ngModel)]="model.email" name="email"
+      #email="ngModel">
+      <div [hidden]="email.valid || email.pristine"
+      class="alert alert-danger">
+      E-mail is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password"
+    required
+    [(ngModel)]="model.password" name="password" 
+    #password="ngModel">
+    <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+      Password is required
+    </div>
+  </div>
+
+    <div class="form-group">
+    <label for="password">Confirm Password</label>
+    <input type="password" class="form-control" id="password1"
+    required
+    [(ngModel)]="model.passconf" name="passconf" 
+    #passconf="ngModel">
+    <div [hidden]="passconf.valid || passconf.pristine" class="alert alert-danger">
+      Confirm password
+    </div>
+  </div>
+
+  <button type="reset"  class="btn btn-default">Cancel</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!userForm.form.valid">Submit</button>
+</form>
+</div>
+
+<!-- <div [hidden]="!submitted">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">User Name</div>
+    <div class="col-xs-9  pull-left">{{ model.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">E-mail</div>
+    <div class="col-xs-9 pull-left">{{ model.email }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Password</div>
+    <div class="col-xs-9 pull-left">{{ model.password }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+</div> -->
+</div>

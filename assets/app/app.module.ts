@@ -9,24 +9,24 @@ import { HttpModule }          from '@angular/http';
 
 
 import { AppComponent }			from './app.component';
-import { RegisterComponent}	from './components/register.component';
 import { NavBarComponent }	from './components/navbar.component';
 import { HomeComponent }		from './components/home.component';
-import { LoginComponent }   from './components/login.component';
+import { LoginComponent }   from './components/users/user/user-login.component';
+import { UserComponent }    from './components/users/user/user.component';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent }
+  { path: '',         component: HomeComponent  },
+  { path: 'home',     component: HomeComponent  },
+  { path: 'register', component: UserComponent  },
+  { path: 'login',    component: LoginComponent }
 ];
  
 @NgModule({
     declarations:[
     		AppComponent,
-    		RegisterComponent,
+        UserComponent,
     		NavBarComponent,
     		HomeComponent,
         LoginComponent
@@ -34,6 +34,7 @@ const appRoutes: Routes = [
     imports:[
     		BrowserModule,
     		FormsModule,
+        HttpModule,
     		RouterModule.forRoot(appRoutes)
     ],
     bootstrap:    [ AppComponent ],

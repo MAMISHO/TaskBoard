@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterComponent } from './components/register.component';
+// import { RegisterComponent } from './components/register.component';
 
 @Component({
     selector: 'my-app',

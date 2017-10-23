@@ -8,15 +8,31 @@
 module.exports = {
 
   attributes: {
-  	username : {
-  		type: 'string'
+    id:{
+      type: 'integer',
+      autoIncrement: true
+    },
+  	
+    username : {
+  		type: 'string',
+      primaryKey: true,
+      required: true
   	},
+
   	email : {
+  		type: 'string',
+      unique: true
+  	},
+  	
+    password:{
   		type: 'string'
   	},
-  	password:{
-  		type: 'string'
-  	}
+
+    userkind:{
+      type: 'string',
+      enum: ['user', 'admin']
+    }
   }
+
 };
 
