@@ -9,5 +9,5 @@ import { User }			from '../models/user.model';
 })
 export class LoginComponent {
 
-	model = new User(0, '', '', '', '');
+	model = new User(0, '', '', '', '', '');
 }

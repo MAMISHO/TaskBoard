@@ -29,8 +29,8 @@
  					if (err) { return res.serverError(err); }
 
  					sails.log('Finn\'s id is:', newUser.id);
- 					return res.ok();
- 					// return res.send(200, {user: newuser});
+ 					//return res.ok();
+ 					 return res.send(200, {user: newuser});
  		});
  			}else{
  				return res.json(500, {error: "El usuario " + userExist.username + " ya existe"});	

@@ -10,7 +10,7 @@ const core_1 = require("@angular/core");
 const user_model_1 = require("../models/user.model");
 let LoginComponent = class LoginComponent {
     constructor() {
-        this.model = new user_model_1.User(0, '', '', '', '');
+        this.model = new user_model_1.User(0, '', '', '', '', '');
     }
 };
 LoginComponent = __decorate([

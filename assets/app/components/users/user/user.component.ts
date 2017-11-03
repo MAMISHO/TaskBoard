@@ -32,7 +32,7 @@ export class UserComponent {
 			this.submitted = true;
 
 		return	this.http.post('/register', JSON.stringify(this.model), this.options)
-				.subscribe(	hero  =>  this.extractData(hero),
+				.subscribe(	user  =>  this.extractData(user),
                      		error =>  console.log(error));
 		}
 		
@@ -45,6 +45,11 @@ export class UserComponent {
 	private extractData(res: Response) {
     	let body = res.json();
     	return body.data || { };
+  	}
+
+  	private error(res: Response){
+  		let body = res.json();
+    	return body.data || { };	
   	}
 
 }

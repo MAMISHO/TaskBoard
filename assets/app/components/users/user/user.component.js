@@ -30,13 +30,17 @@ let UserComponent = class UserComponent {
         if (this.model.password === this.model.passconf) {
             this.submitted = true;
             return this.http.post('/register', JSON.stringify(this.model), this.options)
-                .subscribe(hero => this.extractData(hero), error => console.log(error));
+                .subscribe(user => this.extractData(user), error => console.log(error));
         }
     }
     newUser() {
         this.model = new user_model_1.User(0, '', '', '', '', '');
     }
     extractData(res) {
+        let body = res.json();
+        return body.data || {};
+    }
+    error(res) {
         let body = res.json();
         return body.data || {};
     }

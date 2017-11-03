@@ -31,6 +31,12 @@ module.exports = {
     userkind:{
       type: 'string',
       enum: ['user', 'admin']
+    },
+
+    projs:{
+      collection: 'proj',
+      via: 'users',
+      dominant: true
     }
   }
 
